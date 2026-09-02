@@ -1,0 +1,12 @@
+#Types of variables in python
+class Circle:
+    pi=3.14       #Class Variable i.e. all objects share the same pi value(Stored on the class itself)
+    def __init__(self,radius):
+        self.radius=radius   #Instance variable i.e. each object(self) has its own unique radius(Saved on each individual object)
+    def area(self):
+        area = Circle.pi * (self.radius**2) #Local variable i.e. it will only exist inside the area method
+        print(area)
+
+        
+c=Circle(2)
+c.area()
