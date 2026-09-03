@@ -4,11 +4,11 @@ class BankAccount:
     self._name=name #Protected variable
     self.post=post #Public variable(default)
 
-@property  (Built in decorator to set any method as a getter method i.e. read only method, allowing it to act like an attribute)
+@property  #(Built in decorator to set any method as a getter method i.e. read only method, allowing it to act like an attribute)
 def balance(self):
   return self.__balance
 
-@balance.setter (It is used to set a method as setter only method, on which we applied @property.)
+@balance.setter #(It is used to set a method as setter only method, on which we applied @property.)
 def balance(self,amount):
   if amount<0:
     print("Balance cannot be -ve")
