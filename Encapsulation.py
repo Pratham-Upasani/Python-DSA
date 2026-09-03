@@ -18,3 +18,8 @@ def balance(self,amount):
 b=BankAccount(50000,"Rajesh","Accountant")
 print(b.balance)  #Automatically calls getter method, allowing balance() to act like an attribute instead of a method
 b.balance=4000 #Automatically calls setter method, allowing us to control access to private variables
+print(b.balance)
+
+#Output:
+#50000
+#4000
