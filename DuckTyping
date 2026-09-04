@@ -1,0 +1,14 @@
+#Duck typing - polymorphism without inheritence
+class Duck:
+    def sound(self):
+        print("Quack")
+
+class Car:
+    def sound(self):
+        print("Vroom")
+        
+def make_it_sound(x):    #x meaning the passed object
+    x.sound()
+
+make_it_sound(Duck())  #Both classes are not related to each other, but they have the same method name sound()
+make_it_sound(Car())   #So this is called duck typing i.e. polymorphism without inheritence
