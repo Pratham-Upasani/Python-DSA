@@ -1,0 +1,8 @@
+class Animal:
+    def __init__(self,name):
+        self.name=name
+    def info(self):   #Instance method - works on one specific object, need self
+        print(f"Name = {self.name}")
+        
+a=Animal("Rex")
+a.info()
