@@ -1,0 +1,22 @@
+#Operator Overloading
+class Point:
+    def __init__(self,x,y,z):
+        self.x=x
+        self.y=y
+        self.z=z
+    def __add__(self,b):
+        return f"({self.x + b.x},{self.y + b.y},{self.z + b.z})"
+    def __sub__(self,b):
+        return f"({self.x - b.x},{self.y - b.y},{self.z- b.z})"
+    def __mul__(self,b):
+        return f"({self.x * b.x},{self.y * b.y},{self.z * b.z})"
+    def __str__(self):
+        return f"Coordinates = ({self.x},{self.y},{self.z})"
+
+p1=Point(1,2,3)
+p2=Point(4,5,6)
+
+print(p1+p2)   
+print(p1-p2)
+print(p1*p2)
+print(p1)
