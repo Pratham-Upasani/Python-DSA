@@ -1,0 +1,28 @@
+#Class methods - Methods that operate only on the class variables rather than any object(self), they require "cls" as first parameter to access class variables
+class Student:
+    count=0        #Class variables(Class methods only operate on class variables)
+    total_gpa=0  
+
+    def __init__(self,name,gpa):
+        self.name=name
+        self.gpa=gpa
+        Student.count+=1
+        Student.total_gpa+=gpa
+
+    def get_info(self):
+        print(f"{self.name} {self.gpa}")
+
+    @classmethod
+    def get_count(cls):
+        print(f"Total number of students in class = {cls.count}")
+
+    @classmethod
+    def average_gpa(cls):
+        print(f"Average gpa = {cls.total_gpa/cls.count}")
+
+s1=Student("Pratham",7.9)
+s2=Student("Samarth",8.1)
+s3=Student("Suresh",9.9)
+
+Student.get_count()
+Student.average_gpa()
