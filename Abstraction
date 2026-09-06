@@ -1,0 +1,29 @@
+from abc import ABC, abstractmethod
+
+class PaymentMethod(ABC):
+
+    @abstractmethod
+    def pay(self,amount):
+        pass
+
+    def receipt(self,amount):
+        return f"Receipt: {amount}$ paid."
+
+class CreditCard(PaymentMethod):
+    def pay(self,amount):
+        return f"{amount}$ paid using credit card."
+
+class UPI(PaymentMethod):
+    def pay(self,amount):
+        return f"{amount}$ paid using UPI."
+
+c=CreditCard()
+u=UPI()
+
+print(c.pay(4000))
+print(u.pay(2000))
+print(c.receipt(6000))
+print(u.receipt(2500))
+    
+        
+    
