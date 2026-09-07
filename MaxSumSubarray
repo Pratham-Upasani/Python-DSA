@@ -1,0 +1,13 @@
+def max_sum_subarray(L,k):
+    sum_window=sum(L[0:k])    #Sum of first window
+    max_sum = sum_window    #Initially
+    
+    for i in range(len(L)-k):    #Calculate number of times we will slide the window
+        sum_window = sum_window - L[i] + L[i+k]  #Slide the window by 1
+        #To slide the window: Remove first element, Add last element of next window from the sum of previous window
+        max_sum = max(max_sum, sum_window)  #max(sum of previous window, sum of current window)
+    return max_sum
+
+L=[1,4,5,9,4,2,7,90,27]
+k=3
+print(max_sum_subarray(L,k))
