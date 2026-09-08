@@ -1,0 +1,13 @@
+#Objects
+class Fruit:
+    def __init__(self,name,calories):
+        self.name=name
+        self.calories=calories
+
+    def __repr__(self):
+        return f"Fruits('{self.name}','{self.calories}')"
+
+fruits= [Fruit("banana",105),Fruit("apple",72),Fruit("orange",73),Fruit("coconut",354)]
+
+fruits = sorted(fruits, key = lambda obj: obj.calories)
+print(fruits)
